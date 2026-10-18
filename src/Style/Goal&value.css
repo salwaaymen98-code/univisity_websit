@@ -1,0 +1,195 @@
+.dark-mode {
+    --primary-color: #C41E3A;
+    --secondary-color: #C41E3A;
+    --text-color: #ecf0f1;
+    --background-color: #1a1a1a;
+    --section-background: #2d2d2d;
+    --title-color:#C41E3A;
+}
+
+.goals-values-page {
+    color: #2c3e50;
+}
+.dark-mode.goals-values-page {
+    background-color: #1a1a1a;
+}
+/* Layout Direction Classes */
+.goals-values-page.arabic-layout {
+    direction: rtl;
+}
+
+.goals-values-page.english-layout {
+    direction: ltr;
+}
+
+.campus-banner {
+    position: relative;
+    width: 100%;
+    height: 83vh;
+    overflow: hidden;
+    margin-top: 9.3%;
+}
+
+.campus-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.banner-overlay p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.goals-section,
+.values-section {
+    padding: 4rem 0;
+}
+
+.goals-section {
+    background-color: #ffffff;
+}
+
+.values-section {
+    background-color: #f8f8f8;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.content-title {
+    color: #C41E3A;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.content-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #C41E3A;
+}
+
+.goal-about {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.arabic-layout .goal-about {
+    text-align: justify;
+}
+
+.english-layout .goal-about {
+    text-align: justify;
+}
+
+/* Dark Mode Styles with Increased Specificity */
+.dark-mode .goals-values-page {
+    color: #ecf0f1 !important; /* Direct color for text */
+}
+
+.dark-mode .goals-section {
+    background-color: #1a1a1a; /* Direct dark background */
+}
+
+.dark-mode .values-section {
+    background-color: #1a1a1a; /* Same dark background for consistency */
+}
+
+.goal-value {
+    color: #d49b26 !important; /* Ensure text is light */
+}
+
+.dark-mode .content-title {
+    color: #C41E3A; /* Bright red for titles */
+}
+
+.dark-mode .content-title:after {
+    background-color: #C41E3A; /* Match title underline */
+}
+
+.dark-mode .goal-about {
+    color: #ecf0f1; /* Light text */
+}
+
+
+
+.dark-mode .banner-overlay h1 {
+    color: #C41E3A; /* Light text */
+    background-color: rgba(40, 40, 40, 0.8); /* Semi-transparent background for dark mode */
+}
+
+.dark-mode .banner-overlay p {
+    color: #ecf0f1; /* Light text */
+}
+
+@media (max-width: 992px) {
+    .banner-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-overlay p {
+        font-size: 1.2rem;
+    }
+
+    .content-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .campus-banner {
+        height: 50vh;
+        margin-top: 15%;
+    }
+
+    .banner-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .content-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .campus-banner {
+        height: 40vh;
+        margin-top: 10%;
+    }
+
+    .banner-overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-overlay p {
+        font-size: 1rem;
+    }
+
+    .content-container {
+        padding: 0 1rem;
+    }
+
+    .content-title {
+        font-size: 1.4rem;
+    }
+
+    .goal-about {
+        font-size: 1rem;
+    }
+}

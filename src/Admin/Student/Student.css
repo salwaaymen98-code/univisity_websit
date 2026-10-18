@@ -1,0 +1,231 @@
+/* تنسيقات عامة للصفحة */
+.studentsManagement-results-container {
+    margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f6f7f8;
+}
+
+/* تنسيقات نموذج إدارة الطلاب */
+.studentsManagement-form-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  text-align: center;
+}
+
+.studentsManagement-form-title {
+  font-size: 1.8rem;
+  color: #C41E3A;
+  margin-bottom: 1.5rem;
+}
+
+.studentsManagement-form-group {
+  margin-bottom: 1.2rem;
+  direction: rtl;
+}
+
+.studentsManagement-input-label {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #2f2e2e;
+  margin-bottom: 0.5rem;
+}
+
+.studentsManagement-input-field,
+.studentsManagement-input-select,
+.studentsManagement-view-term-select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  transition: border-color 0.2s;
+}
+
+/* تنسيقات حقول الدرجات */
+.studentsManagement-grade-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.studentsManagement-grade-label {
+  text-align: left;
+  padding-right: 0.5rem;
+  font-size: 0.9rem;
+  color: #2f2e2e;
+}
+
+.studentsManagement-grade-input {
+  width: 92%;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  direction: ltr;
+  text-align: left;
+  transition: border-color 0.2s;
+}
+
+.studentsManagement-grade-input:focus {
+  outline: none;
+  border-color: #C41E3A;
+  box-shadow: 0 0 0 2px rgba(246, 59, 78, 0.93);
+}
+
+.studentsManagement-submit-button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #C41E3A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.studentsManagement-submit-button:hover {
+  background: #C41E3A;
+}
+
+.studentsManagement-submit-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.studentsManagement-search-button {
+  margin-top: 0.5rem;
+  background: #C41E3A;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.studentsManagement-search-button:hover {
+  background: #C41E3A;
+}
+
+.studentsManagement-bg-blue-600 {
+  background: #C41E3A;
+}
+
+.studentsManagement-text-white {
+  color: white;
+}
+
+.studentsManagement-px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.studentsManagement-py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.studentsManagement-rounded {
+  border-radius: 5px;
+}
+
+.studentsManagement-hover:bg-blue-700 {
+  background: #C41E3A;
+}
+
+.studentsManagement-mt-2 {
+  margin-top: 0.5rem;
+}
+
+
+/* تنسيقات الجداول */
+.studentsManagement-table-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 98%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.studentsManagement-table-title {
+  font-size: 1.8rem;
+  color: #C41E3A;
+  margin-bottom: 1.5rem;
+}
+
+.studentsManagement-result-table {
+  border-collapse: collapse;
+  width: 100%;
+  direction: rtl;
+}
+
+.studentsManagement-table-header {
+  background: #C41E3A;
+}
+
+.studentsManagement-header-row {
+  color: white;
+}
+
+.studentsManagement-table-cell {
+  color: #2f2e2e;
+  border: 1px solid #d1d5db;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.studentsManagement-table-body {
+  background: #f9fafb;
+}
+
+.studentsManagement-no-data-text {
+  font-size: 1rem;
+  color: #C41E3A;
+  margin-top: 1rem;
+}
+
+.studentsManagement-text-gray-700 {
+  color: #4b5563;
+}
+
+.studentsManagement-flex {
+  display: flex;
+}
+
+.studentsManagement-items-center {
+  margin-left: 100px;
+  align-items: center;
+  text-align: left;
+  direction: ltr;
+}
+
+.studentsManagement-w-1-2 {
+  width: 50%;
+}
+
+.studentsManagement-pr-2 {
+  padding-right: 0.5rem;
+}
+
+.studentsManagement-mt-8 {
+  margin-top: 2rem;
+}
+
+.studentsManagement-w-full {
+  width: 100%;
+}

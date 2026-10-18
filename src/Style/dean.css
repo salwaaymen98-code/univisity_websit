@@ -1,0 +1,321 @@
+
+/* General Structure */
+.dean-final-container {
+  width: 100%;
+  margin-top: 8.8%;
+  line-height: 1.7;
+  /* Light mode colors */
+  --primary-color: #C41E3A; /* Maroon for headings and accents */
+  --text-color: #000000; /* Black for text */
+  --background-color: #ffffff; /* White background */
+  --section-divider-color: #d49b26 !important ; /* Maroon for divider */
+  --hero-text-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent white for hero text */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.dean-final-container.arabic-mode {
+  direction: rtl;
+  text-align: right;
+}
+
+.dean-final-container.english-mode {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Dark mode overrides */
+.dark-mode.dean-final-container {
+  --primary-color: #C41E3A; /* Brighter red for dark mode */
+  --text-color: #ecf0f1; /* Light gray for text */
+  --background-color: #1a1a1a; /* Dark background */
+  --hero-text-bg: rgba(40, 40, 40, 0.8); /* Semi-transparent dark for hero text */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Main Banner */
+.dean-main-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  background-color: var(--background-color);
+}
+
+.dean-bg-image {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dean Profile Section */
+.dean-profile-section {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 92%;
+  border-radius: 10px;
+  background-color: var(--background-color);
+}
+
+.dark-mode.dean-profile-section {
+  background-color: var(--background-color);
+}
+
+.dean-photo-wrapper {
+  width: 350px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.dean-final-container.english-mode .dean-photo-wrapper {
+  margin-right: 60px; /* Increased spacing in English mode */
+}
+
+.dean-final-container.arabic-mode .dean-photo-wrapper {
+  margin-left: 50px; /* Original spacing for Arabic mode */
+}
+
+.dean-main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.dean-photo-wrapper:hover .dean-main-photo {
+  transform: scale(1.03);
+}
+
+.dean-title-wrapper {
+  flex: 1;
+}
+
+.dean-name-title {
+  color: var(--text-color);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.dean-college-title {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.dean-university-title {
+  color: #666;
+  font-size: 1.4rem;
+}
+
+.dark-mode.dean-university-title {
+  color: #aaa; /* Lighter gray for dark mode */
+}
+
+/* Information Sections */
+.dean-info-sections {
+  padding: 40px 4%;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.dark-mode.dean-info-sections {
+  background-color: var(--background-color);
+}
+
+.dean-info-card {
+  width: 92%;
+  margin: 0 auto 40px;
+  background: var(--background-color);
+  padding: 10px;
+  overflow: hidden;
+}
+
+.dark-mode.dean-info-card {
+  background: var(--background-color);
+}
+
+.dean-card-header {
+  text-align: center;
+  padding: 15px 25px;
+}
+
+.dean-card-header .dean-heading-secondary {
+  color: #d49b26;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+
+
+.arabic-mode .dean-card-header .dean-heading-secondary {
+  border-right: 4px solid #d49b26;
+  padding-right: 15px;
+}
+
+.english-mode .dean-card-header .dean-heading-secondary {
+  border-left: 4px solid #d49b26;
+  padding-left: 15px;
+}
+
+.dean-card-content {
+  padding: 25px;
+  border-bottom: none !important;
+}
+
+.dean-card-divider {
+  height: 1px;
+  margin: 0 25px;
+}
+
+
+
+/* Individual Items */
+.dean-education-item,
+.dean-experience-item,
+.dean-award-item,
+.dean-research-item {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.dean-education-item:last-child,
+.dean-experience-item:last-child,
+.dean-award-item:last-child,
+.dean-research-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dean-education-item .dean-heading-tertiary,
+.dean-experience-item .dean-heading-tertiary,
+.dean-award-item .dean-heading-tertiary {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.dean-card-content .dean-text-paragraph {
+  color: var(--text-color);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.dean-uni-name {
+  color: #666;
+  font-style: italic;
+}
+
+.dark-mode.dean-uni-name {
+  color: #aaa; /* Lighter gray for dark mode */
+}
+
+.dean-banner-overlay .dean-heading-primary {
+  color: var(--primary-color);
+  background-color: var(--hero-text-bg);
+ 
+}
+/* Section Divider */
+.section-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--section-divider-color) !important;
+  margin: 40px auto;
+  width: 70%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dean-banner-overlay .dean-heading-primary {
+    font-size: 3rem;
+  }
+
+  .dean-profile-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .dean-final-container.english-mode .dean-photo-wrapper {
+    margin-right: 0; /* Remove extra margin in responsive view */
+  }
+
+  .dean-final-container.arabic-mode .dean-photo-wrapper {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .dean-photo-wrapper {
+    width: 300px;
+    height: 350px;
+  }
+
+  .dean-name-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dean-main-banner {
+    height: 50vh;
+  }
+
+  .dean-banner-overlay .dean-heading-primary {
+    font-size: 2.5rem;
+    padding: 15px 30px;
+  }
+
+  .dean-photo-wrapper {
+    width: 250px;
+    height: 300px;
+  }
+
+  .dean-name-title {
+    font-size: 1.8rem;
+  }
+
+  .dean-card-header .dean-heading-secondary {
+    font-size: 1.6rem;
+  }
+
+  .dean-info-sections {
+    padding: 30px 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dean-main-banner {
+    height: 40vh;
+  }
+
+  .dean-banner-overlay .dean-heading-primary {
+    font-size: 2rem;
+    padding: 10px 20px;
+  }
+
+  .dean-photo-wrapper {
+    width: 100%;
+    height: 300px;
+    max-width: 250px;
+  }
+
+  .dean-name-title {
+    font-size: 1.6rem;
+  }
+
+  .dean-card-content {
+    padding: 15px;
+  }
+
+  .dean-profile-section {
+    padding: 20px;
+  }
+}

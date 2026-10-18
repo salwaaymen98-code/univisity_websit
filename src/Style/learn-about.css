@@ -1,0 +1,240 @@
+.university-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 9%;
+  line-height: 1.7;
+  /* Light mode colors */
+  --primary-color-light: #C41E3A; /* Maroon for headings and accents */
+  --text-color: #000000; /* Black for text */
+  --background-color: #ffffff; /* White background */
+  --section-divider-color: #C41E3A; /* Maroon for divider */
+  --hero-text-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent white for hero text */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.university-container.arabic {
+  direction: rtl;
+  text-align: right;
+}
+
+.university-container.english {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Dark mode overrides */
+.dark-mode .university-container {
+  --primary-color: #d49b26; /* Brighter red for dark mode */
+  --text-color: #ecf0f1; /* Light gray for text */
+  --background-color: #1a1a1a; /* Dark background */
+  --section-divider-color: #d49b26 !important; /* Brighter red for divider */
+  --hero-text-bg: rgba(40, 40, 40, 0.8); /* Semi-transparent dark for hero text */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Content Section */
+.Content-section {
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem !important; 
+  padding: 40px;
+  background-color: var(--background-color);
+}
+
+.dark-mode .Content-section {
+  background-color: var(--background-color);
+}
+.dark-mode .Hero-text {
+  color: var(--primary-color-light);
+  background-color: var(--hero-text-bg);
+}
+
+/* Heading Classes */
+.heading-primary {
+  color: var(--primary-color-light);
+  font-size: 2.5rem;
+  margin: 40px 0 30px;
+  text-align: center;
+}
+
+.heading-secondary {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 35px 0 20px;
+}
+
+.arabic .heading-secondary {
+  border-right: 4px solid var(--primary-color);
+  padding-right: 15px;
+}
+
+.english .heading-secondary {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+.heading-tertiary {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  margin: 30px 0 15px;
+}
+
+.heading-quaternary {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  margin: 25px 0 12px;
+}
+
+/* Paragraph Class */
+.text-paragraph {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Custom List */
+.custom-list {
+  margin-bottom: 25px;
+  padding-left: 0;
+}
+
+.arabic .custom-list {
+  padding-right: 0;
+}
+
+.custom-list-item {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: var(--text-color);
+  padding-left: 0;
+}
+
+.arabic .custom-list-item {
+  padding-right: 0;
+}
+
+/* Numbered List */
+.custom-list-numbered {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.arabic .custom-list-numbered {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+/* Section Divider */
+.section-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--section-divider-color);
+  margin: 40px auto;
+  width: 70%;
+}
+
+.dark-mode .section-divider {
+  background-color: #d49b26 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-text {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-text {
+    font-size: 2.5rem;
+  }
+
+  .heading-primary {
+    font-size: 2.2rem;
+  }
+
+  .heading-secondary {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+    padding: 15px;
+    width: 95%;
+  }
+
+  .heading-primary {
+    font-size: 2rem;
+  }
+
+  .heading-secondary {
+    font-size: 1.6rem;
+  }
+
+  .text-paragraph,
+  .custom-list-item {
+    font-size: 1.05rem;
+  }
+
+  .Content-section {
+    width: 94%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-text {
+    font-size: 1.8rem;
+    padding: 12px;
+  }
+
+  .heading-primary {
+    font-size: 1.8rem;
+  }
+
+  .heading-secondary {
+    font-size: 1.4rem;
+  }
+
+  .custom-list-item {
+    font-size: 1rem;
+  }
+
+  .section-divider {
+    margin: 30px auto;
+  }
+
+  .Content-section {
+    width: 92%;
+    padding: 30px 0;
+  }
+}

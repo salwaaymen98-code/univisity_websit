@@ -1,0 +1,362 @@
+.contact-us-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 8.3%;
+  line-height: 1.8;
+  /* Light mode colors */
+  --primary-color: #C41E3A;
+  --text-color: #333;
+  --background-color: #ffffff;
+  --hero-text-bg: rgba(255, 255, 255, 0.601);
+  --form-input-bg: #ffffff;
+  --form-shadow-bg: rgba(0,0,0,0.1);
+  --button-bg: #C41E3A;
+  --button-hover-bg: #C41E3A;
+  --college-info-bg: #f9f9f9;
+  --section-divider-color: #C41E3A;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.contact-us-arabic-lang {
+  direction: rtl;
+  text-align: right;
+}
+
+.contact-us-english-lang {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Dark mode overrides */
+.dark-mode .contact-us-container {
+  --primary-color: #C41E3A;
+  --text-color: #ecf0f1;
+  --background-color: #1a1a1a;
+  --hero-text-bg: rgba(40, 40, 40, 0.8);
+  --form-input-bg: rgba(255,255,255,0.1);
+  --form-shadow-bg: rgba(255,255,255,0.1);
+  --button-bg: #C41E3A;
+  --button-hover-bg: #C41E3A;
+  --college-info-bg: #2d2a2a;
+  --section-divider-color: #C41E3A;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+.dark-mode .contact-us-input,.contact-us-textarea{
+  color: var(--text-color);
+  background-color: var(--form-input-bg);
+}
+
+.dark-mode .contact-us-main-title {
+  color: var(--primary-color);
+  background-color: var(--hero-text-bg);
+}
+
+/* Background Section */
+.contact-us-hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.contact-us-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Page Content */
+.contact-us-content-section {
+  width: 92%;
+  max-width: 100%;
+  margin: 50px auto;
+  background: var(--background-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px var(--form-shadow-bg);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-us-section-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.contact-us-arabic-lang .contact-us-section-title {
+  border-right: 4px solid var(--primary-color);
+  padding-right: 15px;
+}
+
+.contact-us-english-lang .contact-us-section-title {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+/* Contact Form */
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-us-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-us-form-group-label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.contact-us-form-group-input,
+.contact-us-form-group-textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  background-color: var(--form-input-bg);
+  color: var(--text-color);
+}
+
+.contact-us-form-group-input:focus,
+.contact-us-form-group-textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.contact-us-form-group-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-us-submit-btn {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.contact-us-submit-btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.contact-us-submit-btn:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.contact-us-submit-btn-icon {
+  margin-right: 8px;
+}
+
+.contact-us-arabic-lang .contact-us-submit-btn-icon {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.contact-us-arabic-lang .contact-us-swal2-title,
+.contact-us-arabic-lang .contact-us-swal2-content,
+.contact-us-arabic-lang .contact-us-swal2-confirm {
+  direction: rtl;
+}
+
+/* College Info */
+.contact-us-college-info-container {
+  background-color: var(--college-info-bg);
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-us-college-logo-container {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.contact-us-college-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-us-college-name {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.contact-us-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.contact-us-info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--form-shadow-bg);
+  width: 100%;
+}
+
+.contact-us-input {
+  height: 25px;
+}
+
+.contact-us-english-lang .contact-us-info-item {
+  flex-direction: row;
+}
+
+.contact-us-arabic-lang .contact-us-info-item {
+  flex-direction: row-reverse;
+}
+
+.contact-us-info-item-icon {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  min-width: 25px;
+}
+
+.contact-us-social-media {
+  width: 100%;
+}
+
+.contact-us-social-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-us-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-us-social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--button-bg);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.contact-us-social-icon:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contact-us-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-us-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-us-hero-section {
+    height: 50vh;
+  }
+  
+  .contact-us-main-title {
+    font-size: 2.2rem;
+  }
+  
+  .contact-us-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-us-college-info-container {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-us-hero-section {
+    height: 45vh;
+  }
+  
+  .contact-us-main-title {
+    font-size: 2rem;
+  }
+  
+  .contact-us-content-section {
+    width: 95%;
+    padding: 30px;
+  }
+  
+  .contact-us-college-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-us-hero-section {
+    height: 40vh;
+  }
+  
+  .contact-us-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-us-content-section {
+    padding: 20px;
+  }
+  
+  .contact-us-info-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-us-info-item-icon {
+    margin-bottom: 5px;
+  }
+  
+  .contact-us-submit-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}

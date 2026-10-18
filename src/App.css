@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./font/Tajawal/Tajawal-Medium.ttf);
+}
+
+:root {
+  font-family: 'Tajawal', sans-serif;
+  user-select: none;
+  -webkit-user-select: none; /* لدعم Safari */
+  -moz-user-select: none; /* لدعم Firefox */
+  -ms-user-select: none;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.App {
+  text-align: center;
+  direction: rtl;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+button {
+  cursor: pointer; /* مؤشر الضغط بدل المسطرة */
+  user-select: none; /* منع تحديد النص داخل الأزرار */
+  outline: none; /* إزالة الإطار عند الضغط */
+}
+
+/* النصوص العامة */
+p, span, div {
+  cursor: default; /* مؤشر افتراضي بدل مؤشر النص */
+}
+
+/* منع ظهور المسطرة على العناصر غير القابلة للتعديل */
+[contenteditable="true"] {
+  cursor: text; /* مؤشر النص فقط للعناصر القابلة للتعديل */
+}
+[contenteditable="false"],
+:not([contenteditable]) {
+  cursor: default;
+}
+
+.contact-us-hero-overlay,.dean-banner-overlay,
+.hero-overlay,.banner-overlay,
+.learn-Hero,.media-office-hero-overlay,
+.practical-hero-overlay,.student-activities-hero-content,
+.Banner-overlay,.work-areas-hero-overlay,.council-header-overlay {
+    position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us-main-title,.council-main-title,
+.dean-heading-primary,.hero-text,
+.banner-overlay-title,.Hero-text ,
+.media-office-title, .practical-main-title,
+.student-activities-title, .Banner-overlay-title,
+.work-areas-main-title{
+  color: #C41E3A;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  width: 85%;
+  border-radius: 8px;
+  background-color:  rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .vision-mission-cards {
+    grid-template-columns: 1fr;
+  }
+}

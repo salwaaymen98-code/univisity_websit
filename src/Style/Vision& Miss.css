@@ -1,0 +1,181 @@
+.dark-mode {
+  --primary-color: #C41E3A;
+  --secondary-color: #C41E3A;
+  --text-color: #ecf0f1;
+  --bg-color: #1a1a1a;
+  --section-bg: #2d2d2d;
+  --title-color: #C41E3A;
+}
+
+.vision-mission-page {
+  color: #2c3e50;
+}
+
+/* Layout Direction Classes */
+.vision-mission-page.arabic-layout {
+  direction: rtl;
+}
+
+.vision-mission-page.english-layout {
+  direction: ltr;
+}
+
+.university-Banner {
+  position: relative;
+  width: 100%;
+  height: 83vh;
+  overflow: hidden;
+  margin-top: 9.3%;
+}
+
+.university-Banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Banner-overlay p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.vision-section, .mission-section {
+  padding: 4rem 0;
+}
+
+.vision-section {
+  background-color: #ffffff;
+}
+
+.mission-section {
+  background-color: #f8f8f8;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.Section-title {
+  color: #C41E3A;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.Section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #C41E3A;
+}
+
+.section-content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.arabic-layout .section-content {
+  text-align: justify;
+}
+
+.english-layout .section-content {
+  text-align: justify;
+}
+
+/* Dark Mode Styles with Increased Specificity*/
+.dark-mode.vision-mission-page {
+ /* Direct color for text */
+  background-color: #1a1a1a;
+} 
+
+
+.dark-mode .mission-section,
+.dark-mode .vision-section {
+  color: white !important;
+  background-color: #1a1a1a !important; /* Slightly lighter dark background */
+}
+
+.dark-mode .Section-title {
+  color: #C41E3A; /* Bright red for titles */
+}
+
+.dark-mode .Section-title:after {
+  background-color: #C41E3A; /* Match title underline */
+}
+
+
+
+.dark-mode .Banner-overlay h1 {
+  color: #C41E3A; /* Light text */
+  background-color: rgba(40, 40, 40, 0.8); /* Semi-transparent background for dark mode */
+}
+
+.dark-mode .Banner-overlay p {
+  color: #ecf0f1; /* Light text */
+}
+
+@media (max-width: 992px) {
+  .Banner-overlay h1 {
+    font-size: 2.5rem;
+  }
+  
+  .Banner-overlay p {
+    font-size: 1.2rem;
+  }
+  
+  .Section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .university-Banner {
+    height: 50vh;
+    margin-top: 15%;
+  }
+  
+  .Banner-overlay h1 {
+    font-size: 2rem;
+  }
+  
+  .Section-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .university-Banner {
+    height: 40vh;
+    margin-top: 10%;
+  }
+  
+  .Banner-overlay h1 {
+    font-size: 1.8rem;
+  }
+  
+  .Banner-overlay p {
+    font-size: 1rem;
+  }
+  
+  .section-container {
+    padding: 0 1rem;
+  }
+  
+  .Section-title {
+    font-size: 1.4rem;
+  }
+  
+  .section-content {
+    font-size: 1rem;
+  }
+}

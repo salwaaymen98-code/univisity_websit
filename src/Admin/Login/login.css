@@ -1,0 +1,186 @@
+/* تنسيقات عامة للصفحة */
+.admin-admin-container {
+    margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f6f7f8;
+}
+
+/* تنسيقات نموذج تسجيل الدخول */
+.admin-login-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.admin-form-title {
+  font-size: 1.8rem;
+  color: #C41E3A;
+  margin-bottom: 1.5rem;
+}
+
+.admin-form-group {
+  margin-bottom: 1.2rem;
+  text-align: right;
+}
+
+.admin-input-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #2f2e2e;
+  margin-bottom: 0.5rem;
+}
+
+.admin-input-field {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  transition: border-color 0.2s;
+}
+
+.admin-input-field:focus {
+  outline: none;
+  border-color: #C41E3A;
+  box-shadow: 0 0 0 2px #c41e3a4e;
+} 
+
+.admin-submit-button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #C41E3A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-submit-button:hover {
+  background: #C41E3A;
+}
+
+.admin-submit-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* تنسيقات لوحة التحكم */
+.admin-dashboard-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(15, 14, 14, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.admin-dashboard-title {
+  font-size: 1.8rem;
+  color: #C41E3A;
+  margin-bottom: 1.5rem;
+}
+
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .admin-dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.admin-dashboard-item {
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(15, 14, 14, 0.1);
+  text-align: center;
+}
+
+.admin-item-label {
+  font-size: 1.2rem;
+  color: #C41E3A;
+  margin-bottom: 0.5rem;
+}
+
+.admin-dashboard-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #C41E3A;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.admin-dashboard-link:hover {
+  cursor: pointer;
+  background: #5c0a17;
+}
+
+/* تنسيقات مشتركة مع StudentsManagement.jsx */
+.result-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.result-table th,
+.result-table td {
+  border: 1px solid #d1d5db;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.result-table th {
+  background: #C41E3A;
+  color: white;
+}
+
+/* .result-table td {
+  background: #f9fafb;
+} */
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}

@@ -1,0 +1,270 @@
+
+.practical-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 8.5%;
+  line-height: 1.8;
+  /* Light mode colors */
+  --primary-color: #C41E3A; /* Maroon for headings and accents */
+  --text-color: #333; /* Dark gray for text */
+  --background-color: #ffffff; /* White background */
+  --section-divider-color: #C41E3A; /* Maroon for divider */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Dark mode overrides */
+.dark-mode .practical-container {
+  --primary-color: #C41E3A; /* Brighter red for dark mode */
+  --text-color: #ecf0f1; /* Light gray for text */
+  --background-color: #1a1a1a; /* Dark background */
+  --hero-text-bg: rgba(40, 40, 40, 0.8); /* Semi-transparent dark for hero text */
+}
+
+.dark-mode .practical-main-title {
+  color: var(--primary-color);
+  background-color: var(--hero-text-bg);
+}
+.practical-arabic-lang {
+  direction: rtl;
+  text-align: right;
+}
+
+.practical-english-lang {
+  direction: ltr;
+  text-align: left;
+}
+
+/* قسم الخلفية */
+.practical-hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.practical-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* محتوى الصفحة */
+.practical-content-section {
+  width: 92%;
+  margin: 50px auto;
+  background: var(--background-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.practical-intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.practical-section-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 35px 0 20px;
+  padding-bottom: 10px;
+}
+
+.practical-arabic-lang .practical-section-title {
+  border-right: 4px solid var(--primary-color);
+  padding-right: 15px;
+}
+
+.practical-english-lang .practical-section-title {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+.practical-section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* أقسام الكلية */
+.practical-department-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.practical-department-section.practical-reverse {
+  flex-direction: row-reverse;
+}
+
+.practical-department-image-container {
+  flex: 1;
+}
+
+.practical-department-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.practical-department-image:hover {
+  transform: scale(1.02);
+}
+
+.practical-department-text {
+  flex: 1;
+}
+
+.practical-department-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.practical-arabic-lang .practical-department-title {
+  border-right: 4px solid var(--primary-color);
+  padding-right: 15px;
+}
+
+.practical-english-lang .practical-department-title {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+.practical-department-description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.practical-department-subtitle {
+  font-size: 1.3rem;
+  color: #d49b26;
+  margin: 25px 0 15px;
+}
+
+.practical-department-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.practical-department-features li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+  color: var(--text-color);
+}
+
+.practical-arabic-lang .practical-department-features li {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+.practical-department-features li:before {
+  content: "•";
+  color: #d49b26;;
+  font-size: 1.8rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.practical-arabic-lang .practical-department-features li:before {
+  left: auto;
+  right: 0;
+}
+
+/* الخطوط الفاصلة */
+.practical-section-divider {
+  border: none;
+  height: 1px;
+  background-color: #d49b26;
+  margin: 30px auto;
+  width: 70%;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 1200px) {
+  .practical-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .practical-department-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .practical-hero-section {
+    height: 50vh;
+  }
+  
+  .practical-main-title {
+    font-size: 2.2rem;
+  }
+  
+  .practical-department-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .practical-hero-section {
+    height: 45vh;
+  }
+  
+  .practical-main-title {
+    font-size: 2rem;
+  }
+  
+  .practical-content-section {
+    width: 95%;
+    padding: 30px;
+  }
+  
+  .practical-department-section {
+    flex-direction: column;
+  }
+  
+  .practical-department-section.practical-reverse {
+    flex-direction: column;
+  }
+  
+  .practical-department-title {
+    font-size: 1.5rem;
+  }
+  
+  .practical-department-features li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .practical-hero-section {
+    height: 40vh;
+  }
+  
+  .practical-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .practical-content-section {
+    padding: 20px;
+  }
+  
+  .practical-section-divider {
+    margin: 25px auto;
+  }
+}

@@ -1,0 +1,184 @@
+.appeal-form-container {
+  width: 80%;
+  margin: 30px auto;
+  margin-top: 11%;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  direction: rtl;
+  text-align: right;
+}
+
+.appeal-form-title {
+  color: #C41E3A;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.appeal-form-section {
+  margin-bottom: 30px;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.appeal-section-title {
+  color: #444;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #C41E3A;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.appeal-section-text {
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.appeal-form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.appeal-form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000 !important;
+}
+
+.appeal-form-input,
+.appeal-form-select {
+  color: black;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.appeal-subjects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.appeal-subject-checkbox {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.appeal-subject-checkbox:hover {
+  border-color: #C41E3A;
+}
+
+.appeal-checkbox-input {
+  margin-left: 10px;
+  transform: scale(1.2);
+}
+
+.appeal-checkbox-label {
+  font-size: 16px;
+}
+
+.appeal-total-amount {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px dashed #C41E3A;
+}
+
+.appeal-total-text {
+  color: #C41E3A;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.appeal-payment-methods {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appeal-payment-option {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.appeal-payment-option:hover {
+  border-color: #C41E3A;
+}
+
+.appeal-radio-input {
+  margin-left: 10px;
+  transform: scale(1.1);
+}
+
+.appeal-radio-label {
+  font-size: 16px;
+}
+
+.appeal-payment-details {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.appeal-submit-btn {
+  background-color: #C41E3A;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.appeal-submit-btn:hover {
+  background-color: #C41E3A;
+}
+
+.appeal-submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .appeal-form-container {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .appeal-form-section {
+    padding: 15px;
+  }
+}

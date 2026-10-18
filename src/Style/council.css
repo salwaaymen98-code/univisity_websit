@@ -1,0 +1,263 @@
+.council-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 8.8%;
+  line-height: 1.8;
+  /* Light mode colors */
+  --primary-color: #C41E3A; /* Maroon for headings and accents */
+  --text-color: #000000; /* Black for text */
+  --background-color: #ffffff; /* White background */
+  --hero-text-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent white for hero text */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.council-container.arabic-lang {
+  direction: rtl;
+  text-align: right;
+}
+
+.council-container.english-lang {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Dark mode overrides */
+.dark-mode .council-container {
+  --primary-color: #C41E3A; /* Brighter red for dark mode */
+  --text-color: #ecf0f1; /* Light gray for text */
+  --background-color: #1a1a1a; /* Dark background */
+  --section-divider-color: #C41E3A; /* Brighter red for divider */
+  --hero-text-bg: rgba(40, 40, 40, 0.8); /* Semi-transparent dark for hero text */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Header Section */
+.council-header-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.council-hero-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.council-header-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Reduced opacity for better image visibility */
+}
+
+.council-law-reference {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Page Content */
+.council-content-section {
+  width: 92%;
+  margin: auto;
+  padding: 40px;
+  background-color: var(--background-color);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .council-content-section {
+  background-color: var(--background-color);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.dark-mode .council-main-title {
+  color: #C41E3A;
+  background-color: rgba(40, 40, 40, 0.8);
+}
+
+.council-responsibilities-title {
+  color: #d49b26;
+  font-size: 2rem;
+  margin: 35px 0 20px;
+}
+
+.arabic-lang .council-responsibilities-title {
+  border-right: 4px solid #d49b26;
+  padding-right: 15px;
+}
+
+.english-lang .council-responsibilities-title {
+  border-left: 4px solid #d49b26;
+  padding-left: 15px;
+}
+
+/* Lists */
+.council-responsibilities-list {
+  margin-bottom: 25px;
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Reset padding */
+}
+
+.arabic-lang .council-responsibilities-list {
+  padding-right: 30px; /* Reset padding for RTL */
+  padding-left: 0;
+}
+
+.council-responsibilities-list-item {
+  font-size: 1.2rem; /* Adjusted for better readability */
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: var(--text-color);
+  /* padding-left: 15px; Reduced padding to bring text closer to bullet */
+  position: relative;
+}
+
+.arabic-lang .council-responsibilities-list-item {
+  padding-right: 15px; /* Reduced padding for RTL */
+  padding-left: 0;
+}
+
+.council-responsibilities-list-item::before {
+  content: '•'; /* Custom bullet */
+  color: #d49b26; /* Gold color */
+  font-size: 1.5rem;
+  position: absolute;
+  left: 2px; /* Reduced distance to bring bullet closer to text */
+  top: 2px; /* Align with text */
+}
+
+.arabic-lang .council-responsibilities-list-item::before {
+  left: auto;
+  right: 2px; /* Reduced distance for RTL */
+}
+
+/* Divider Line */
+.council-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--section-divider-color);
+  margin: 40px auto;
+  width: 70%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .council-main-title {
+    font-size: 2.8rem;
+  }
+  .council-law-reference {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .council-main-title {
+    font-size: 2.5rem;
+  }
+  .council-responsibilities-title {
+    font-size: 1.8rem;
+  }
+  .council-law-reference {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .council-header-section {
+    height: 80vh;
+  }
+  .council-main-title {
+    font-size: 2rem;
+    padding: 15px;
+    width: 95%;
+  }
+  .council-law-reference {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  .council-responsibilities-title {
+    font-size: 1.6rem;
+  }
+  .council-responsibilities-list {
+    padding-left: 0;
+  }
+  .arabic-lang .council-responsibilities-list {
+    padding-right: 0;
+  }
+  .council-responsibilities-list-item {
+    padding-left: 13px; /* Adjusted for smaller screens */
+  }
+  .arabic-lang .council-responsibilities-list-item {
+    padding-right: 13px;
+  }
+  .council-responsibilities-list-item::before {
+    left: 1px; /* Adjusted for smaller screens */
+  }
+  .arabic-lang .council-responsibilities-list-item::before {
+    right: 1px;
+  }
+  .council-content-section {
+    width: 94%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .council-header-section {
+    height: 70vh;
+  }
+  .council-main-title {
+    font-size: 1.8rem;
+    padding: 12px;
+  }
+  .council-responsibilities-title {
+    font-size: 1.4rem;
+  }
+  .council-responsibilities-list {
+    padding-left: 0;
+  }
+  .arabic-lang .council-responsibilities-list {
+    padding-right: 0;
+  }
+  .council-responsibilities-list-item {
+    font-size: 1rem;
+    padding-left: 12px; /* Further reduced for small screens */
+  }
+  .arabic-lang .council-responsibilities-list-item {
+    padding-right: 12px;
+  }
+  .council-responsibilities-list-item::before {
+    left: 0px; /* Further reduced for small screens */
+  }
+  .arabic-lang .council-responsibilities-list-item::before {
+    right: 0px;
+  }
+  .council-divider {
+    margin: 30px auto;
+  }
+  .council-content-section {
+    width: 92%;
+    padding: 20px;
+  }
+}

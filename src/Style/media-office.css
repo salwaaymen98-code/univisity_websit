@@ -1,0 +1,288 @@
+/* الهيكل الأساسي */
+.media-office-page {
+  width: 100%;
+  margin: auto;
+  margin-top: 8.3%;
+  color: #333;
+  line-height: 1.8;
+  /* Light mode colors */
+  --primary-color: #C41E3A; /* Maroon for headings and accents */
+  --text-color: #333; /* Dark gray for text */
+  --background-color: #ffffff; /* White background */
+  --section-divider-color: #C41E3A; /* Maroon for divider */
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Dark mode overrides */
+.dark-mode .media-office-page {
+  --primary-color: #C41E3A; /* Brighter red for dark mode */
+  --text-color: #ecf0f1; /* Light gray for text */
+  --background-color: #1a1a1a; /* Dark background */
+}
+.dark-mode .media-office-title {
+  color: var(--primary-color);
+  background-color: var(--hero-text-bg);
+}
+.media-office-arabic {
+  direction: rtl;
+  text-align: right;
+}
+
+.media-office-english {
+  direction: ltr;
+  text-align: left;
+}
+
+/* قسم الخلفية */
+.media-office-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.media-office-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+
+
+/* محتوى الصفحة */
+.media-office-content {
+  width: 92%;
+  margin: 50px auto;
+  background: var(--background-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.media-office-intro {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* قائمة الأخبار */
+.media-office-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.media-office-news-item {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d49b26;
+}
+
+.media-office-arabic .media-office-news-item {
+  flex-direction: row-reverse;
+}
+
+.media-office-news-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.media-office-news-img-container {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.media-office-news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.media-office-news-item:hover .media-office-news-img {
+  transform: scale(1.05);
+}
+
+.media-office-news-date {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.media-office-arabic .media-office-news-date {
+  left: auto;
+  right: 10px;
+}
+
+.media-office-news-content {
+  flex: 2;
+}
+
+.media-office-news-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.media-office-news-summary {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.media-office-news-full-content {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* الترقيم */
+.media-office-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.media-office-page-btn {
+  width: 100px;
+  background: linear-gradient(135deg, var(--primary-color), #a52a2a);
+  border: none;
+  color: white;
+  padding: 15px ;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.media-office-page-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #C41E3A, var(--primary-color));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.media-office-page-btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* الخطوط الفاصلة */
+.media-office-divider {
+  border: none;
+  height: 1px;
+  background-color: #d49b26;
+  margin: 30px auto;
+  width: 70%;
+}
+
+/* التصميم المتجاوب */
+
+@media (max-width: 992px) {
+  .media-office-hero {
+    height: 50vh;
+  }
+  
+  .media-office-title {
+    font-size: 2.2rem;
+  }
+  
+  .media-office-news-item {
+    flex-direction: column;
+  }
+  
+  .media-office-arabic .media-office-news-item {
+    flex-direction: column;
+  }
+  
+  .media-office-news-img-container {
+    min-width: 100%;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-office-hero {
+    height: 45vh;
+  }
+  
+  .media-office-title {
+    font-size: 2rem;
+  }
+  
+  .media-office-content {
+    width: 95%;
+    padding: 30px;
+  }
+  
+  .media-office-news-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .media-office-hero {
+    height: 40vh;
+  }
+  
+  .media-office-title {
+    font-size: 1.8rem;
+  }
+  
+  .media-office-content {
+    padding: 20px;
+  }
+  
+  .media-office-divider {
+    margin: 25px auto;
+  }
+  
+  .media-office-pagination {
+    gap: 15px;
+  }
+  
+  .media-office-page-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .media-office-pagination {
+    gap: 8px;
+  }
+  
+  .media-office-page-btn {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+}
